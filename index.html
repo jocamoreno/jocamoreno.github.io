@@ -155,8 +155,8 @@ body::after {
 #fun .fun-intro { font: 25px/1.55 Georgia, serif; max-width: 680px; }
 #fun .interests { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
 #fun .interests span { border: 1px solid #af8e83; padding: 7px 17px; border-radius: 50%; font: italic 17px/1.6 Georgia, serif; }
-#fun .interests span:nth-child(2) { transform: rotate(-4deg); }
-#fun .interests span:nth-child(3) { transform: rotate(3deg); }
+#fun .interests span:nth-child(2) { transform: none; }
+#fun .interests span:nth-child(3) { transform: none; }
 @media (max-width: 900px) { .links { gap: 12px; } .links a { font-size: 11px; } }
 @media (max-width: 640px) {
     .links { gap: 5px 12px; flex-wrap: wrap; justify-content: flex-start; }
@@ -224,6 +224,10 @@ footer .social-links { display: flex; justify-content: center; align-items: cent
 .social-circle:hover { background: var(--gold); color: var(--night); transform: translateY(-3px); }
 footer p { margin: 0; }
 @media (prefers-reduced-motion: reduce) { .social-circle { transition: none; } .social-circle:hover { transform: none; } }
+
+/* Let the section headings stand on their own. */
+.section-grid { display: block; max-width: 860px; }
+.project h3 { margin-top: 8px; }
     </style>
 </head>
 
@@ -251,7 +255,6 @@ footer p { margin: 0; }
         </div>
         <section id="about">
             <div class="wrap section-grid">
-                <div class="label">01 / About me</div>
                 <div>
                     <h2>About me</h2>
                     <p class="intro">My research focuses on adapting models from mathematical biology to study social
@@ -269,11 +272,9 @@ footer p { margin: 0; }
         </section>
         <section id="research">
             <div class="wrap">
-                <div class="label">02 / Research & projects</div>
                 <h2>Research & projects</h2>
                 <p class="muted">Selected research projects.</p>
                 <article class="project">
-                    <div class="number">01</div>
                     <div>
                         <h3>Patterns in calls for service</h3>
                         <p>I analyze calls-for-service data to understand how call patterns vary over time and across
@@ -284,7 +285,6 @@ footer p { margin: 0; }
                     </div>
                 </article>
                 <article class="project">
-                    <div class="number">02</div>
                     <div>
                         <h3>Modeling opioid use disorder</h3>
                         <p>I develop compartmental models to study how prevention compliance and treatment adherence
@@ -300,7 +300,6 @@ footer p { margin: 0; }
         <section id="teaching" class="teaching">
             <div class="wrap section-grid">
                 <div>
-                    <div class="label">03 / Teaching & outreach</div>
                     <h2>Teaching & outreach</h2>
                 </div>
                 <div>
@@ -355,7 +354,6 @@ footer p { margin: 0; }
         </section>
         <section id="fun">
             <div class="wrap section-grid">
-                <div class="label">04 / Outside of math</div>
                 <div class="fun-content">
                     <div>
                         <h2>For fun.</h2>
@@ -378,7 +376,6 @@ footer p { margin: 0; }
         </section>
         <section id="cv">
             <div class="wrap section-grid">
-                <div class="label">05 / CV & contact</div>
                 <div>
                     <h2>Let’s connect.</h2>
                     <p>I’m interested in academic and industry opportunities where I can apply mathematical modeling,
